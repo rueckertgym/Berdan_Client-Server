@@ -6,7 +6,6 @@ public class Main {
         UserClient Nutzer = new UserClient("10.56.17.190", 13);
         a.processNewConnection("10.56.17.190", 13);
         Bestellung b = new Bestellung();
-        Nutzer.send("Einhornfurzkissen:M:Rot");
-        a.processMessage("11.12", 13,);
+        Nutzer.send(b.getNachricht());
     }
 }

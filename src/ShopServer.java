@@ -27,7 +27,7 @@ public class ShopServer extends Server {
         } else if(nachrichtenTeil[0].equals("ABMELDEN")) {
             closeConnection(pClientIP, pClientPort);
         }  else {
-            this.send(pClientIP, pClientPort, "Bitte korr´rigieren sie ihre Eingaben.");
+            this.send(pClientIP, pClientPort, "Bitte korrigieren sie ihre Eingaben.");
         }
     }
 
