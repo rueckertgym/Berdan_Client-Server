@@ -1,8 +1,11 @@
 import utils.Client;
+
+import java.util.Scanner;
+
 public class UserClient extends Client {
     public UserClient(String pServerIP, int pServerPort){
         super(pServerIP, pServerPort);
-        groesseFarbeWaehlen("M", "ROt");
+        groesseFarbeWaehlen("M", "Rot");
     }
     public void groesseFarbeWaehlen(String pGroesse, String pFarbe){
         this.send("TShirt:" + pGroesse+ ":" + pFarbe);
@@ -14,9 +17,5 @@ public class UserClient extends Client {
         this.send("Abmelden");
     }
     public void processMessage(String pMessage) {
-    }
-    public static void main(String[] args) {
-        new ShopServer(13);
-        new UserClient("11.12", 13);
     }
 }
