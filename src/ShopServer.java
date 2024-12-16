@@ -23,6 +23,7 @@ public class ShopServer extends Server {
                 System.out.println("Vielen Dank für ihre Bestellung.");
                 closeConnection(pClientIP, pClientPort);
             } else if(nachrichtenTeil[1].equals("nein")){
+                System.out.println("Okay, einen drecks Tag noch.");
                 closeConnection(pClientIP, pClientPort);
             } else {
                 this.send(pClientIP,pClientPort, "Bitte geben sie ja oder nein ein.");
@@ -34,6 +35,7 @@ public class ShopServer extends Server {
         }  else {
             this.send(pClientIP, pClientPort, "Bitte korrigieren sie ihre Eingaben.");
             System.out.println("Bitte korrigieren sie ihre Eingaben");
+
         }
     }
 

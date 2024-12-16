@@ -9,6 +9,8 @@ public class EingabenRegistrieren {
     private boolean Bestellvorgang;
 
     public EingabenRegistrieren() {
+    }
+    public String Verarbeiten() {
         Scanner in = new Scanner(System.in);
         System.out.println("(1) Bestellen");
         //System.out.println("(2) Bestätigen");
@@ -29,8 +31,8 @@ public class EingabenRegistrieren {
                 Eingabe = "ABMELDEN";
                 break;
         }
+        return Eingabe;
     }
-
     public String getEingabe() {
         return Eingabe;
     }
@@ -38,3 +40,4 @@ public class EingabenRegistrieren {
         Bestellvorgang = pBestellvorgang;
     }
 }
+
