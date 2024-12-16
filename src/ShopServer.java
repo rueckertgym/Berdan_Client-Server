@@ -8,7 +8,7 @@ public class ShopServer extends Server {
     }
 
     public void processNewConnection(String pClientIP, int pClientPort) {
-        this.send(pClientIP, pClientPort, "Willkommen! Wählen sie eine Größe und eine Darbe für ihr Einhornfurzkissen");
+        this.send(pClientIP, pClientPort, "Willkommen! Wählen sie eine Größe und eine Farbe für ihr Einhornfurzkissen");
     }
 
     public void processMessage(String pClientIP, int pClientPort, String pMessage) {

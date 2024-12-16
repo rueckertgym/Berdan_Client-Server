@@ -6,12 +6,15 @@ public class Main {
 
     public static void main(String[] args) {
         ShopServer a = new ShopServer(13);
-        UserClient Nutzer = new UserClient("10.56.17.190", 13);
-        a.processNewConnection("10.56.17.190", 13);
+        System.out.println("Geben sie ihre IP-Adresse an:");
+        Scanner in = new Scanner(System.in);
+        String IP = (String) in.nextLine();
+        UserClient Nutzer = new UserClient(IP, 13);
+        a.processNewConnection(IP, 13);
+        System.out.println(a.isConnectedTo(IP,13));
 
         Nutzer.send(NutzerEingabe.Verarbeiten());
         if (NutzerEingabe.getEingabe().equals(splitt())){
-            Scanner in = new Scanner(System.in);
             String Bestaetigung = in.nextLine();
             Bestaetigung = "Bestaetigung" + ":" + Bestaetigung;
             Nutzer.send(Bestaetigung);
